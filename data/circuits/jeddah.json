@@ -26,7 +26,7 @@
     { "number": 20, "name": "Turn 20", "type": "fast", "distanceFromSf": 3600 },
     { "number": 21, "name": "Turn 21", "type": "fast", "distanceFromSf": 3800 },
     { "number": 22, "name": "Turn 22", "type": "fast", "distanceFromSf": 4000 },
-    { "number": 23, "name": "Turn 23", "type": "slow", "distanceFromSf": 4450, "hasDrsZoneAfter": true, "notes": "Hairpin near Jeddah Corniche waterfront." },
+    { "number": 23, "name": "Turn 23", "type": "slow", "distanceFromSf": 4450, "hasDrsZoneAfter": true, "notes": "Slow double-right near Jeddah Corniche waterfront." },
     { "number": 24, "name": "Turn 24", "type": "fast", "distanceFromSf": 4700 },
     { "number": 25, "name": "Turn 25", "type": "fast", "distanceFromSf": 4900 },
     { "number": 26, "name": "Turn 26", "type": "fast", "distanceFromSf": 5100 },

@@ -24,7 +24,7 @@
     { "number": 18, "name": "Turn 18 (Stamford Road)", "type": "slow", "distanceFromSf": 3850 },
     { "number": 19, "name": "Turn 19", "type": "slow", "distanceFromSf": 4050 },
     { "number": 20, "name": "Turn 20", "type": "medium", "distanceFromSf": 4250 },
-    { "number": 21, "name": "Turn 21 (Turn 21)", "type": "hairpin", "distanceFromSf": 4500, "hasDrsZoneAfter": true },
+    { "number": 21, "name": "Turn 21", "type": "hairpin", "distanceFromSf": 4500, "hasDrsZoneAfter": true },
     { "number": 22, "name": "Turn 22", "type": "medium", "distanceFromSf": 4700 },
     { "number": 23, "name": "Turn 23", "type": "slow", "distanceFromSf": 4850 }
   ],

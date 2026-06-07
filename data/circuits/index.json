@@ -22,5 +22,6 @@
   { "circuitId": "qatar",        "name": "Lusail International Circuit",           "country": "Qatar",         "file": "qatar.json" },
   { "circuitId": "abu-dhabi",    "name": "Yas Marina Circuit",                     "country": "UAE",           "file": "abu-dhabi.json" },
   { "circuitId": "suzuka",       "name": "Suzuka International Racing Course",     "country": "Japan",         "file": "suzuka.json" },
+  { "circuitId": "austria",      "name": "Red Bull Ring",                          "country": "Austria",       "file": "austria.json" },
   { "circuitId": "portimao",     "name": "Autodromo Internacional do Algarve",     "country": "Portugal",      "file": "portimao.json" }
 ]

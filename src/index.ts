@@ -6,7 +6,7 @@
  * For real-time telemetry position data delivery, see https://racehooks.io
  */
 
-import type { CircuitCornerMap, CircuitListEntry } from "./types.js";
+import type { CircuitCornerMap, CircuitListEntry, CornerAnnotation } from "./types.js";
 
 // Import all circuit data
 import bahrain from "../data/circuits/bahrain.json";
@@ -32,34 +32,36 @@ import lasVegas from "../data/circuits/las-vegas.json";
 import qatar from "../data/circuits/qatar.json";
 import abuDhabi from "../data/circuits/abu-dhabi.json";
 import suzuka from "../data/circuits/suzuka.json";
+import austria from "../data/circuits/austria.json";
 import portimao from "../data/circuits/portimao.json";
 
 // Circuit map by ID
 const CIRCUIT_MAP: Record<string, CircuitCornerMap> = {
-  "bahrain":      bahrain as CircuitCornerMap,
-  "jeddah":       jeddah as CircuitCornerMap,
-  "melbourne":    melbourne as CircuitCornerMap,
-  "shanghai":     shanghai as CircuitCornerMap,
-  "miami":        miami as CircuitCornerMap,
-  "imola":        imola as CircuitCornerMap,
-  "monaco":       monaco as CircuitCornerMap,
-  "barcelona":    barcelona as CircuitCornerMap,
-  "montreal":     montreal as CircuitCornerMap,
-  "silverstone":  silverstone as CircuitCornerMap,
-  "budapest":     budapest as CircuitCornerMap,
-  "spa":          spa as CircuitCornerMap,
-  "zandvoort":    zandvoort as CircuitCornerMap,
-  "monza":        monza as CircuitCornerMap,
-  "baku":         baku as CircuitCornerMap,
-  "singapore":    singapore as CircuitCornerMap,
-  "austin":       austin as CircuitCornerMap,
-  "mexico-city":  mexicoCity as CircuitCornerMap,
-  "interlagos":   interlagos as CircuitCornerMap,
-  "las-vegas":    lasVegas as CircuitCornerMap,
-  "qatar":        qatar as CircuitCornerMap,
-  "abu-dhabi":    abuDhabi as CircuitCornerMap,
-  "suzuka":       suzuka as CircuitCornerMap,
-  "portimao":     portimao as CircuitCornerMap,
+  "bahrain":      bahrain as unknown as CircuitCornerMap,
+  "jeddah":       jeddah as unknown as CircuitCornerMap,
+  "melbourne":    melbourne as unknown as CircuitCornerMap,
+  "shanghai":     shanghai as unknown as CircuitCornerMap,
+  "miami":        miami as unknown as CircuitCornerMap,
+  "imola":        imola as unknown as CircuitCornerMap,
+  "monaco":       monaco as unknown as CircuitCornerMap,
+  "barcelona":    barcelona as unknown as CircuitCornerMap,
+  "montreal":     montreal as unknown as CircuitCornerMap,
+  "silverstone":  silverstone as unknown as CircuitCornerMap,
+  "budapest":     budapest as unknown as CircuitCornerMap,
+  "spa":          spa as unknown as CircuitCornerMap,
+  "zandvoort":    zandvoort as unknown as CircuitCornerMap,
+  "monza":        monza as unknown as CircuitCornerMap,
+  "baku":         baku as unknown as CircuitCornerMap,
+  "singapore":    singapore as unknown as CircuitCornerMap,
+  "austin":       austin as unknown as CircuitCornerMap,
+  "mexico-city":  mexicoCity as unknown as CircuitCornerMap,
+  "interlagos":   interlagos as unknown as CircuitCornerMap,
+  "las-vegas":    lasVegas as unknown as CircuitCornerMap,
+  "qatar":        qatar as unknown as CircuitCornerMap,
+  "abu-dhabi":    abuDhabi as unknown as CircuitCornerMap,
+  "suzuka":       suzuka as unknown as CircuitCornerMap,
+  "austria":      austria as unknown as CircuitCornerMap,
+  "portimao":     portimao as unknown as CircuitCornerMap,
 };
 
 /**
@@ -118,8 +120,8 @@ export function getCircuitsWithDrs(): CircuitListEntry[] {
  */
 export function findCornersByType(
   type: "hairpin" | "slow" | "medium" | "fast" | "chicane"
-): Array<{ circuitId: string; corner: import("./types.js").CornerAnnotation }> {
-  const results: Array<{ circuitId: string; corner: import("./types.js").CornerAnnotation }> = [];
+): Array<{ circuitId: string; corner: CornerAnnotation }> {
+  const results: Array<{ circuitId: string; corner: CornerAnnotation }> = [];
   for (const circuit of Object.values(CIRCUIT_MAP)) {
     for (const corner of circuit.corners) {
       if (corner.type === type) {
