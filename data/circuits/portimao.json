@@ -1,0 +1,24 @@
+{
+  "circuitId": "portimao",
+  "name": "Autodromo Internacional do Algarve",
+  "country": "Portugal",
+  "lapLengthKm": 4.653,
+  "corners": [
+    { "number": 1, "name": "Turn 1 (Galp)", "type": "slow", "distanceFromSf": 280, "notes": "Downhill braking zone. Track dips at the apex — difficult to manage." },
+    { "number": 2, "name": "Turn 2", "type": "medium", "distanceFromSf": 550 },
+    { "number": 3, "name": "Turn 3", "type": "medium", "distanceFromSf": 750 },
+    { "number": 4, "name": "Turn 4 (Hairpin)", "type": "hairpin", "distanceFromSf": 1000, "hasDrsZoneAfter": true, "notes": "Tight hairpin. DRS detection point." },
+    { "number": 5, "name": "Turn 5", "type": "fast", "distanceFromSf": 1350 },
+    { "number": 6, "name": "Turn 6", "type": "fast", "distanceFromSf": 1600 },
+    { "number": 7, "name": "Turn 7 (Subida Palheiro)", "type": "fast", "distanceFromSf": 1900, "notes": "Uphill blind crest. Very demanding." },
+    { "number": 8, "name": "Turn 8", "type": "fast", "distanceFromSf": 2150 },
+    { "number": 9, "name": "Turn 9", "type": "fast", "distanceFromSf": 2450 },
+    { "number": 10, "name": "Turn 10", "type": "fast", "distanceFromSf": 2700 },
+    { "number": 11, "name": "Turn 11 (Chicane)", "type": "chicane", "distanceFromSf": 3100 },
+    { "number": 12, "name": "Turn 12", "type": "medium", "distanceFromSf": 3400 },
+    { "number": 13, "name": "Turn 13 (Long right)", "type": "slow", "distanceFromSf": 3700 },
+    { "number": 14, "name": "Turn 14", "type": "slow", "distanceFromSf": 3950 },
+    { "number": 15, "name": "Turn 15 (Final chicane)", "type": "chicane", "distanceFromSf": 4400, "hasDrsZoneAfter": true }
+  ],
+  "_accuracy": "corner names approximate — contribute corrections at github.com/racehooks/corner-map"
+}

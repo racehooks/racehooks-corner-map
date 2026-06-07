@@ -1,0 +1,57 @@
+{
+  "name": "@racehooks/corner-map",
+  "version": "0.1.0",
+  "description": "F1 circuit corner annotations: numbers, types, names, and distances for 24 circuits",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/racehooks/corner-map.git"
+  },
+  "homepage": "https://racehooks-ai.com",
+  "bugs": {
+    "url": "https://github.com/racehooks/corner-map/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "data",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "f1",
+    "formula1",
+    "racing",
+    "circuits",
+    "corners",
+    "telemetry",
+    "typescript",
+    "motorsport"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
