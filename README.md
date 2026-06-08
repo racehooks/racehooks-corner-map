@@ -4,7 +4,7 @@ F1 circuit corner annotations for all 24 circuits on the calendar: corner number
 
 FastF1 has circuit corner data but only via Python. This package makes it accessible in any language via JSON + TypeScript.
 
-For real-time telemetry delivery (including Position.z X/Y data at 3.7 Hz), see [racehooks.io](https://racehooks.io).
+For real-time positional telemetry delivery (X/Y coordinates at 3.7 Hz), see [racehooks.io](https://racehooks.io).
 
 ## Installation
 
@@ -49,20 +49,19 @@ circuits.forEach(c => console.log(`${c.circuitId}: ${c.name}`));
 
 ### Annotating position telemetry
 
-When consuming `@racehooks/f1-telemetry-schema`'s `PositionMessage`, you get raw X/Y coordinates in F1's internal coordinate system. Use this package to add semantic meaning:
+RaceHooks delivers positional telemetry (X/Y coordinates at 3.7 Hz) via the `position` webhook feed. Use this package to add semantic corner context:
 
 ```typescript
-import type { PositionMessage } from '@racehooks/f1-telemetry-schema';
 import { getCircuitCornerMap } from '@racehooks/corner-map';
 
+// position payload from your RaceHooks webhook contains X/Y per driver
 function annotatePosition(
-  position: PositionMessage,
+  positionPayload: { Entries: Record<string, { X: number; Y: number }> },
   circuitId: string
 ) {
   const cornerMap = getCircuitCornerMap(circuitId);
   if (!cornerMap) return;
 
-  // Position.z provides X/Y at 3.7 Hz
   // cornerMap.corners provides semantic context for each section of circuit
   // Use distanceFromSf to correlate approximate position with corner context
 
@@ -117,11 +116,9 @@ All 24 circuits on the F1 calendar are included. Corner counts reflect the offic
 
 ## Coordinate System Note
 
-This package provides semantic corner annotations (number, type, name, distance from S/F line). For raw X/Y coordinates per corner in F1's internal coordinate system, the live telemetry Position.z feed provides vehicle positions at 3.7 Hz.
+This package provides semantic corner annotations (number, type, name, distance from S/F line). For real-time X/Y positional telemetry at 3.7 Hz, RaceHooks delivers a `position` webhook feed — see [racehooks.io](https://racehooks.io).
 
-The `@racehooks/f1-telemetry-schema` package defines the `PositionMessage` type for the decoded Position.z payload. RaceHooks delivers this via webhooks in real time — see [racehooks.io](https://racehooks.io).
-
-Corner X/Y geometry can be derived by correlating telemetry position data with lap distance at the known corner distance values. This is a community research project.
+Corner X/Y geometry can be derived by correlating telemetry position data with lap distance at the known corner distance values.
 
 ---
 
