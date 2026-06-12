@@ -1,13 +1,13 @@
 {
   "name": "@racehooks/corner-map",
   "version": "0.1.0",
-  "description": "F1 circuit corner annotations: numbers, types, names, and distances for 24 circuits",
+  "description": "F1 circuit corner annotations: numbers, types, names, and distances for 25 circuits",
   "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/racehooks/corner-map.git"
   },
-  "homepage": "https://racehooks-ai.com",
+  "homepage": "https://racehooks.io",
   "bugs": {
     "url": "https://github.com/racehooks/corner-map/issues"
   },

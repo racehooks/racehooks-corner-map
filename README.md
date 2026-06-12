@@ -1,10 +1,12 @@
 # @racehooks/corner-map
 
-F1 circuit corner annotations for all 24 circuits on the calendar: corner numbers, types, famous names, and distances from the start/finish line.
+F1 circuit corner annotations for all 25 circuits on the calendar: corner numbers, types, famous names, and distances from the start/finish line.
 
 FastF1 has circuit corner data but only via Python. This package makes it accessible in any language via JSON + TypeScript.
 
 For real-time positional telemetry delivery (X/Y coordinates at 3.7 Hz), see [racehooks.io](https://racehooks.io).
+
+> RaceHooks is an independent service and is not affiliated with or endorsed by Formula One Management or the FIA. "Formula 1," "F1," and related marks are trademarks of Formula One Licensing BV.
 
 ## Installation
 
@@ -83,7 +85,7 @@ const allHairpins = findCornersByType('hairpin');
 
 ## Circuit Coverage
 
-All 24 circuits on the F1 calendar are included. Corner counts reflect the official numbered corners.
+All 25 circuits on the F1 calendar are included. Corner counts reflect the official numbered corners.
 
 | Circuit ID    | Name                                       | Country        | Corners |
 |---------------|--------------------------------------------|----------------|---------|
@@ -111,6 +113,7 @@ All 24 circuits on the F1 calendar are included. Corner counts reflect the offic
 | abu-dhabi     | Yas Marina Circuit                         | UAE            | 17      |
 | suzuka        | Suzuka International Racing Course         | Japan          | 12      |
 | portimao      | Autodromo Internacional do Algarve         | Portugal       | 15      |
+| austria       | Red Bull Ring                              | Austria        | 10      |
 
 ---
 
