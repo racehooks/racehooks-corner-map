@@ -177,4 +177,4 @@ MIT
 
 ---
 
-Built by [RaceHooks](https://racehooks.io) — real-time F1 webhook delivery for developers.
+Built by [RaceHooks](https://racehooks.io) — the motorsports analytics platform: 50+ live F1 feeds and twelve production ML models, delivered to your webhook.
