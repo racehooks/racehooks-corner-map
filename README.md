@@ -2,9 +2,9 @@
 
 F1 circuit corner annotations for all 25 circuits on the calendar: corner numbers, types, famous names, and distances from the start/finish line.
 
-FastF1 has circuit corner data but only via Python. This package makes it accessible in any language via JSON + TypeScript.
+Circuit corner data has historically lived only in Python tooling. This package makes it accessible in any language via JSON + TypeScript.
 
-For real-time positional telemetry delivery (X/Y coordinates at 3.7 Hz), see [racehooks.io](https://racehooks.io).
+For real-time positional telemetry delivery (live X/Y coordinates), see [racehooks.io](https://racehooks.io).
 
 > RaceHooks is an independent service and is not affiliated with or endorsed by Formula One Management or the FIA. "Formula 1," "F1," and related marks are trademarks of Formula One Licensing BV.
 
@@ -51,7 +51,7 @@ circuits.forEach(c => console.log(`${c.circuitId}: ${c.name}`));
 
 ### Annotating position telemetry
 
-RaceHooks delivers positional telemetry (X/Y coordinates at 3.7 Hz) via the `position` webhook feed. Use this package to add semantic corner context:
+RaceHooks delivers positional telemetry (live X/Y coordinates) via the `position` webhook feed. Use this package to add semantic corner context:
 
 ```typescript
 import { getCircuitCornerMap } from '@racehooks/corner-map';
@@ -119,7 +119,7 @@ All 25 circuits on the F1 calendar are included. Corner counts reflect the offic
 
 ## Coordinate System Note
 
-This package provides semantic corner annotations (number, type, name, distance from S/F line). For real-time X/Y positional telemetry at 3.7 Hz, RaceHooks delivers a `position` webhook feed — see [racehooks.io](https://racehooks.io).
+This package provides semantic corner annotations (number, type, name, distance from S/F line). For real-time X/Y positional telemetry, RaceHooks delivers a `position` webhook feed — see [racehooks.io](https://racehooks.io).
 
 Corner X/Y geometry can be derived by correlating telemetry position data with lap distance at the known corner distance values.
 
@@ -177,4 +177,4 @@ MIT
 
 ---
 
-Built by [RaceHooks](https://racehooks.io) — the motorsports analytics platform: 50+ live F1 feeds and twelve production ML models, delivered to your webhook.
+Built by [RaceHooks](https://racehooks.io) — the motorsports analytics platform: 50+ live F1 feeds and fourteen production ML models, delivered to your webhook.
