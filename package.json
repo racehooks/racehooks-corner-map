@@ -5,7 +5,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/racehooks/corner-map.git"
+    "url": "https://github.com/racehooks/racehooks-corner-map.git"
   },
   "homepage": "https://racehooks.io",
   "bugs": {
