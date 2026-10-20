@@ -171,6 +171,10 @@ Corner types:
 
 ---
 
+## Documentation
+
+Full docs: https://racehooks.io/docs/motorsport-data-api
+
 ## License
 
 MIT
